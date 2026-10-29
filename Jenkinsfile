@@ -2,7 +2,7 @@ pipeline {
     agent {
         label 'python-agent'
     }
-    Stages {
+    stages {
         stage('checkout code') {
             steps{
                 checkout scm      
