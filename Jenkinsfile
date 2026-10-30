@@ -12,8 +12,6 @@ pipeline {
         stage('Run Unit Test') {
             steps {
                 container('python') {
-                    sh 'apt-get update && apt-get install -y procps'
-                    sh 'pip install -r requirements.txt'
                     sh 'pytest'
                }
            }
