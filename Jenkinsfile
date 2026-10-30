@@ -13,9 +13,8 @@ pipeline {
             steps {
                 container('python') {
                     sh 'apt-get update && apt-get install -y procps'
-                    sh 'python3 -m venv venv'
-                    sh './venv/bin/pip install -r Requirements.txt'
-                    sh './venv/bin/pytest'
+                    sh 'pip install -r requirements.txt'
+                    sh 'pytest'
                }
            }
        }
